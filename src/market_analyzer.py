@@ -127,7 +127,8 @@ class MarketAnalyzer:
         self.profile: MarketProfile = get_profile(self.region)
         self.strategy = get_market_strategy_blueprint(self.region)
 
-        def _get_review_language(self) -> str:
+        
+    def _get_review_language(self) -> str:
         return normalize_report_language(
             getattr(getattr(self, "config", None), "report_language", "zh")
         )
